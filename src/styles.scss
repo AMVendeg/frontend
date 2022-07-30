@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+$color-dark: #040c12;
+$color-light: #e9f0f6;
+$color-orange: rgb(216, 173, 19);
+$color-aqua: aqua;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sun-bg {
+  background: url("./assets/sun_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  background: url("./assets/sun_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px;
+  box-shadow: 5px 5px 40px 2px $color-dark;
+}
+
+.title {
+  margin-left: -10px;
+  text-align: center;
+  color: $color-orange;
+}
