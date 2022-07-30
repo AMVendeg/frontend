@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseURL: `https://api.nasa.gov/DONKI/CMEAnalysis?`,
+  apiKey: `&api_key=w3FU6XRnVLiLXGeL6qpXgGyIJNqLuLzpInillrbt`
 };
 
 /*

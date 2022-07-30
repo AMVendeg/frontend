@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SUNCMECardComponent } from './sun-cme-card/sun-cme-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SUNCMECardComponent
   ],
   imports: [
     BrowserModule,
