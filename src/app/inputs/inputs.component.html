@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="search">
+    <input [(ngModel)]="startDate" type="date" class="form-control" name="startDate"/>
+    <input [(ngModel)]="endDate" type="date" class="form-control" name="endDate"/>
+    <input [(ngModel)]="speed" type="number" class="form-control" name="speed"/>
+    <input [(ngModel)]="halfAngle" type="number" class="form-control" name="halfAngle"/>
+
+    <button class="search-btn" type="submit">
+      Search
+    </button>
+  </div>
+  <div class="note">
+    <span class="muted">* Select start date, end date, speed and halfAngle</span>
+  </div>
+</form>
