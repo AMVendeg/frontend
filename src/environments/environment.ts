@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   baseURL: `https://api.nasa.gov/DONKI/CMEAnalysis?`,
-  apiKey: `&api_key=w3FU6XRnVLiLXGeL6qpXgGyIJNqLuLzpInillrbt`
+  apiKey: `&api_key=w3FU6XRnVLiLXGeL6qpXgGyIJNqLuLzpInillrbt`,
+  mostAccurateOnly: true,
+  catalog: 'ALL'
 };
 
 /*
