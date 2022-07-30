@@ -19,11 +19,11 @@ export class SunCMEService {
   getCmeData(
     startDate: string, 
     endDate: string, 
-    speed: number, 
-    halfAngle: number): Observable<CME[]> {
+    halfAngle: number, 
+    speed: number): Observable<CME[]> {
     return this.http.get<CME[]>(
       this.baseURL + `startDate=` + startDate + `&endDate=`+ endDate + 
-      `&speed=` + speed + `&halfAngle=`+ halfAngle + this.apiKey);
+      `&halfAngle=` + halfAngle + `&speed=`+ speed + this.apiKey);
   }
 
 }

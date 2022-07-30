@@ -1,9 +1,9 @@
 <form (ngSubmit)="onSubmit()">
   <div class="search">
-    <input [(ngModel)]="startDate" type="date" class="form-control" name="startDate"/>
-    <input [(ngModel)]="endDate" type="date" class="form-control" name="endDate"/>
-    <input [(ngModel)]="speed" type="number" class="form-control" name="speed"/>
-    <input [(ngModel)]="halfAngle" type="number" class="form-control" name="halfAngle"/>
+    <input [(ngModel)]="startDate" type="date" class="form-control" id="start" name="startDate"/>
+    <input [(ngModel)]="endDate" type="date" class="form-control" id="end" name="endDate"/>
+    <input [(ngModel)]="halfAngle" type="number" class="form-control" id="halfAngle" name="halfAngle"/>
+    <input [(ngModel)]="speed" type="number" class="form-control" id="speed" name="speed"/>
 
     <button class="search-btn" type="submit">
       Search

@@ -1,0 +1,87 @@
+* {
+  font-family: 'Roboto' !important;
+  font-weight: 300 !important;
+}
+
+.search {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  vertical-align: middle;
+  margin: auto;
+  width: 700px;
+}
+
+
+.form-control {
+  width: 300px;
+  height: 40px;
+  border: 0.5px solid rgb(184, 228, 246);
+  border-radius: 2px;
+  text-transform: uppercase;
+  background-color: rgba(25, 68, 84, 0.0);
+  padding: 10px;
+  color: rgb(96, 125, 136);
+  margin-right: 10px;
+}
+
+.form-control::placeholder {
+  color:rgb(60, 74, 80);
+}
+
+#start {
+  width: 100px;
+}
+
+#end {
+  width: 100px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(80%);
+}
+
+#halfAngle {
+  width: 60px;
+}
+
+#speed {
+  width: 60px;
+}
+
+.search-btn {
+  width: 170px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 2px;
+  border: 0.5px solid rgb(184, 228, 246);
+  color:rgb(247, 250, 252);
+  text-transform: uppercase;
+  background-color: rgba(25, 68, 84, 0.0);
+  margin-left: 80px;
+}
+
+.search-btn:hover {
+  border: 1px solid rgb(216, 173, 19);
+  color: rgb(216, 173, 19);
+}
+
+.search-btn:active {
+  transform: translateY(2px);
+}
+
+.note {
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.muted {
+  font-size: smaller;
+  color: aqua;
+  font-family: 'Roboto';
+  font-weight: 200;
+}
+

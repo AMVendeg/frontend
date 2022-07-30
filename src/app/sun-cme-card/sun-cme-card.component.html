@@ -1,1 +1,54 @@
-<p>sun-cme-card works!</p>
+<app-inputs (data)="searchCME($event)"></app-inputs>
+
+<div id="all-data">
+<table *ngFor="let cme of cmeData" id="myTable">
+  <thead id="mythead">
+    <tr>
+    <th>Time</th>
+    <th>Latitude</th>
+    <th>HalfAngle</th>
+    <th>Speed</th>
+    <th>Type</th>
+    <th>Most Accurate</th>
+    <th>Associated CME ID</th>
+    <th>Note</th>
+    <th>Catalog</th>
+    <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ cme.time21_5 }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.latitude }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.halfAngle }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.speed }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.type }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.isAccurateMost }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.associatedCMEID }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.note }}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.catalog}}</td>
+    </tr>
+    <tr>
+      <td>{{ cme.link }}</td>
+    </tr>
+    
+    <hr>
+  </tbody>
+</table>
+</div>
