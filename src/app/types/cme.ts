@@ -4,7 +4,7 @@ export interface CME {
   halfAngle: number;
   speed: number;
   type: string;
-  isAccurateMost: boolean;
+  isMostAccurate: boolean;
   associatedCMEID: string;
   note: string;
   catalog: string;

@@ -11,7 +11,7 @@ export class SunCMEService {
 
   baseURL = environment.baseURL;
   apiKey = environment.apiKey;
-  mostAccurateOnly = environment.mostAccurateOnly;
+  isMostAccurate = environment.mostAccurateOnly;
   catalog = environment.catalog;
 
   constructor(private http: HttpClient) { }
