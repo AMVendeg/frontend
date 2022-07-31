@@ -1,6 +1,10 @@
 <app-inputs (data)="searchCME($event)"></app-inputs>
 
-<div class="all-data">
+<button (click)="exportExcel()" type="button" class="dwnld">
+  <i class="fa-solid fa-download"></i>
+</button>
+
+<div class="allData">
 <table class="table">
   <thead>
     <tr>

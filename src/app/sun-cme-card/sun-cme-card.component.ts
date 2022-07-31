@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { CME } from '../types/cme';
 import { SunCMEService } from '../services/sun-cme.service';
+import { ActivatedRoute } from '@angular/router';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-sun-cme-card',
@@ -9,8 +11,7 @@ import { SunCMEService } from '../services/sun-cme.service';
 })
 export class SUNCMECardComponent implements OnInit {
 
-  
-  constructor(private SunCMEService: SunCMEService) {
+  constructor(private SunCMEService: SunCMEService, private route: ActivatedRoute) {
     this.cmeData;
   }
   
@@ -21,6 +22,7 @@ export class SUNCMECardComponent implements OnInit {
   myEndDate = "";
   myHalfAngle = 0;
   mySpeed = 0;
+  fileName = 'ExcelSheet.xlsx';
 
   ngOnInit(): void { }
 
@@ -35,6 +37,19 @@ export class SUNCMECardComponent implements OnInit {
     this.myEndDate = data.endDate;
     this.myHalfAngle = data.halfAngle;
     this.mySpeed = data.speed;
+  }
+
+  exportExcel(): void {
+    // pass table ID
+    let element = document.getElementById('all-data');
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    // generate workbook and add the worksheet
+    const workbook: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+    // save to file
+    XLSX.writeFile(workbook, this.fileName);
   }
 
 }

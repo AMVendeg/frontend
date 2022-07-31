@@ -38,7 +38,7 @@ $color-aqua: aqua;
 }
 
 .label {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #start, #end {
@@ -85,6 +85,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .note {
   margin: auto;
+  width: 660px;
   padding-bottom: 20px;
 }
 

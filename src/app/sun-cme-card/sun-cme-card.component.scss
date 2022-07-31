@@ -6,19 +6,37 @@ $color-aqua: aqua;
 * {
   font-family: 'Roboto';
   font-weight: 200; 
-  color: $color-light;
 }
 
-.all-data {
+.dwnld {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid aqua !important;
+  border-radius: 3px !important;
+  color: $color-aqua !important;
+  font-size: 16px;
+  background: none;
+}
+
+.dwnld:hover {
+  border: 0.5px solid rgb(216, 173, 19) !important;
+  color: rgb(216, 173, 19) !important;
+}
+
+.dwnld:active {
+  transform: rotateY(2px);
+}
+
+.allData {
   margin-top: 40px;
 }
 
 table {
   background-color: rgba(4, 20, 25, 0.2);
-  color: white;
-  width: 900px;
+  color: $color-light;
+  width: 1200px;
 }
 
-.note {
-  width: 100px;
-}
