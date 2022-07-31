@@ -18,11 +18,12 @@ export class SUNCMECardComponent implements OnInit {
   @Input()
   cmeData!: CME[];
   cmeList!: CME[];
+  fileName = 'ExcelSheet.xlsx';
   myStartDate = "";
   myEndDate = "";
   myHalfAngle = 0;
   mySpeed = 0;
-  fileName = 'ExcelSheet.xlsx';
+  myDatas: number[] = [];
 
   ngOnInit(): void { }
 
@@ -41,7 +42,7 @@ export class SUNCMECardComponent implements OnInit {
 
   exportExcel(): void {
     // pass table ID
-    let element = document.getElementById('all-data');
+    let element = document.getElementById('allData');
     const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
 
     // generate workbook and add the worksheet

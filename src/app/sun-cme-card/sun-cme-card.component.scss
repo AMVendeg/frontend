@@ -8,7 +8,7 @@ $color-aqua: aqua;
   font-weight: 200; 
 }
 
-.dwnld {
+.dwnld-btn {
   position: absolute;
   top: 110px;
   right: 20px;
@@ -21,16 +21,16 @@ $color-aqua: aqua;
   background: none;
 }
 
-.dwnld:hover {
+.dwnld-btn:hover {
   border: 0.5px solid rgb(216, 173, 19) !important;
   color: rgb(216, 173, 19) !important;
 }
 
-.dwnld:active {
+.dwnld-btn:active {
   transform: rotateY(2px);
 }
 
-.allData {
+#allData {
   margin-top: 40px;
 }
 
