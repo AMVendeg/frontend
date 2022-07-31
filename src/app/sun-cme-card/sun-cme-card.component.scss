@@ -6,19 +6,19 @@ $color-aqua: aqua;
 * {
   font-family: 'Roboto';
   font-weight: 200; 
+  color: $color-light;
 }
 
+.all-data {
+  margin-top: 40px;
+}
 
-table, table-striped {
+table {
   background-color: rgba(4, 20, 25, 0.2);
   color: white;
-  width: 800px;
+  width: 900px;
 }
 
 .note {
   width: 100px;
-}
-
-.line {
-  color: aqua;
 }
