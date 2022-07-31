@@ -7,12 +7,14 @@ import { SUNCMECardComponent } from './sun-cme-card/sun-cme-card.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SUNCMECardComponent,
-    InputsComponent
+    InputsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

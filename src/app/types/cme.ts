@@ -9,4 +9,5 @@ export interface CME {
   note: string;
   catalog: string;
   link: string;
+  id?: number;
 }

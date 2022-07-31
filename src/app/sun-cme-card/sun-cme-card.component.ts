@@ -9,10 +9,11 @@ import { SunCMEService } from '../services/sun-cme.service';
 })
 export class SUNCMECardComponent implements OnInit {
 
+  
   constructor(private SunCMEService: SunCMEService) {
     this.cmeData;
-   }
-
+  }
+  
   @Input()
   cmeData!: CME[];
   cmeList!: CME[];

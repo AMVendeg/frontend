@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
 
-$color-dark: #040c12;
+$color-dark: rgb(4, 12, 18);
 $color-light: #e9f0f6;
 $color-orange: rgb(216, 173, 19);
 $color-aqua: aqua;
@@ -25,7 +25,8 @@ $color-aqua: aqua;
 }
 
 .dashboard {
-  background: url("./assets/sun_bg.jpg");
+  // background: url("./assets/sun_bg.jpg");
+  background-color: rgb(4, 12, 18, 0.8);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -1,0 +1,32 @@
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">What's that all mean?</h4>
+    <button type="button" class="button-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <br>
+    <h5>You can see sun ejection activities in a specific date range.</h5>
+    <br>
+    <p class="highlighted">What cause a geomagnetic storm to form?</p>
+    <p>Geomagnetic storms are brief disturbances in Earth's magnetic field and 
+      atmosphere (aka the magnetosphere) caused by bursts of radiation and 
+      charged particles emitted from the Sun. </p><br>
+    
+     <p>Click on "More", if you are interested in NOAA.</p>
+
+     <a href="https://www.noaa.gov/" target="_blank">
+      <button type="button" class="btn btn-more">MORE</button>
+    </a>
+
+    <div class="text-end">
+      <button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
+    </div>
+  </div>
+</ng-template>
+
+<button class="btn side-info-btn" (click)="openCustomPanel(content)">
+  <i class="fa-solid fa-info"></i>
+</button>
+

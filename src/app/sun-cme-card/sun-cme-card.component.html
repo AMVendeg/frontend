@@ -1,21 +1,23 @@
 <app-inputs (data)="searchCME($event)"></app-inputs>
 
 <div id="all-data">
-<table id="myTable" class="table">
+<table class="table">
   <thead>
     <tr>
-    <th>Time</th>
-    <th>Latitude</th>
-    <th>HalfAngle</th>
-    <th>Speed</th>
-    <th>Type</th>
-    <th>Most Accurate</th>
-    <th>Associated CME ID</th>
-    <th>Catalog</th>
+    <th scope="col">#</th>
+    <th scope="col">Time</th>
+    <th scope="col">Latitude</th>
+    <th scope="col">HalfAngle</th>
+    <th scope="col">Speed</th>
+    <th scope="col">Type</th>
+    <th scope="col">Most Accurate</th>
+    <th scope="col">Associated CME ID</th>
+    <th scope="col">Catalog</th>
     </tr>
   </thead>
-  <tbody *ngFor="let cme of cmeData">
-    <tr class="tr">
+  <tbody>
+    <tr *ngFor="let cme of cmeData">
+      <th>{{ cme.id }}</th>
       <td>{{ cme.time21_5 }}</td>
       <td>{{ cme.latitude }}</td>
       <td>{{ cme.halfAngle }}</td>

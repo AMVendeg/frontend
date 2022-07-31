@@ -1,0 +1,95 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto' !important;
+  font-weight: 300 !important;
+}
+
+.offcanvas-header {
+  background-color: rgb(3, 40, 58);
+  border: 0.5px solid rgb(3, 40, 58);
+  color: aqua;
+}
+
+.offcanvas-body {
+  background: url("https://images.unsplash.com/photo-1590907047706-ee9c08cf3189?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 0.5px solid rgb(3, 40, 58);
+  color: aqua;
+}
+
+.highlighted {
+  color: rgb(216, 173, 19);
+  font-style: italic;
+}
+
+
+.side-info-btn {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid aqua;
+  color: aqua;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.side-info-btn:hover {
+  border: 0.5px solid rgb(216, 173, 19);
+  color: rgb(216, 173, 19);
+}
+
+.side-info-btn:active {
+  border: none !important;
+}
+
+.side-info-btn:checked {
+  border: none !important;
+}
+
+.button-close {
+  width: 40px;
+  height: 40px;
+  color: aqua !important;
+  border: 0.5px solid aqua !important;
+  border-radius: 3px;
+  background: none;
+  vertical-align: middle;
+}
+
+.button-close:hover {
+  color: rgb(216, 173, 19) !important;
+  border: 0.5px solid rgb(216, 173, 19) !important;
+}
+
+.button-close:focus {
+  border: none;
+}
+.button-close:active {
+  border: none;
+}
+
+.btn-more {
+  border: 0.5px solid aqua;
+  border-radius: 3px;
+  padding: 10px 30px 10px 30px;
+  color: aqua;
+}
+
+.btn-more:hover {
+  color: rgb(216, 173, 19) !important;
+  border: 0.5px solid rgb(216, 173, 19) !important;
+}
+
+.btn-more:active {
+ transform: rotateY(2px);
+}
+
+
