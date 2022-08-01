@@ -23,7 +23,6 @@ export class SUNCMECardComponent implements OnInit {
   myEndDate = "";
   myHalfAngle = 0;
   mySpeed = 0;
-  myDatas: number[] = [];
 
   ngOnInit(): void { }
 

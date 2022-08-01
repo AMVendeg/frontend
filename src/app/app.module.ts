@@ -8,13 +8,15 @@ import { InputsComponent } from './inputs/inputs.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SUNCMECardComponent,
     InputsComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginRegisterComponent
   ],
   imports: [
     BrowserModule,

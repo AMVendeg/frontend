@@ -1,0 +1,34 @@
+$color-dark: #040c12;
+$color-light: #e9f0f6;
+$color-orange: rgb(216, 173, 19);
+$color-aqua: aqua;
+
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+.dark-modal .close {
+  color: white;
+}
+
+.login-register {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid aqua !important;
+  border-radius: 3px !important;
+  color: $color-aqua !important;
+  font-size: 16px;
+  background: none;
+}
+
+.login-register:hover {
+  border: 0.5px solid rgb(216, 173, 19) !important;
+  color: rgb(216, 173, 19) !important;
+}
+
+.login-register:active {
+  transform: rotateY(2px);
+}
