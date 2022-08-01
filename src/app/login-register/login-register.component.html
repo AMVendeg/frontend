@@ -1,29 +1,81 @@
 <ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-  </div>
   <div class="modal-body">
-    <p>One fine body&hellip;</p>
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <li [ngbNavItem]="1" class="login">
+        <a ngbNavLink><i class="fa-solid fa-user-check login-icon"></i>LOGIN</a>
+        <ng-template ngbNavContent>
+          <div class="content">
+            <h4 class="modal-title">LOGIN</h4>
+            <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <form>
+        <div class="email-input">
+            <input type="email" id="loginName" class="form-control" value="ksjdkf"/>
+        </div>
+
+        <!-- Password input -->
+        <div class="password-input">
+          <input type="password" id="loginPassword" class="form-control" />
+        </div>
+
+        <!-- 2 column grid layout -->
+        <div class="row mb-4">
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-3 mb-md-0">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="loginCheck"
+                checked
+              />
+              <label class="form-check-label" for="loginCheck">
+                Remember me
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Sign in
+        </button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a>Register</a></p>
+        </div>
+      </form>
+    </div>
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="2" class="register">
+        <a ngbNavLink><i class="fa-solid fa-user-plus register-icon"></i>REGISTER</a>
+        <ng-template ngbNavContent class="content">
+          <div class="content">
+            <h4 class="modal-title">REGISTER</h4>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+             </p>
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+    
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-  </div>
+  <button type="button" class="close-btn" (click)="modal.dismiss('close')">
+    <i class="fa-solid fa-close"></i>
+  </button>
 </ng-template>
 
-<ng-template #longContent let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-  </div>
-  <div class="modal-body">
-    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna.</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-  </div>
-</ng-template>
-
-<button (click)="openModalDialogCustomClass(longContent)" class="login-register">
+<button (click)="openModalDialogCustomClass(content)" class="login-register">
   <i class="fa-solid fa-user"></i>
 </button>

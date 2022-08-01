@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class LoginRegisterComponent implements OnInit {
 
   closeResult: string = '';
+  active = 1;
 
   @Output()
   closeForm: EventEmitter<void> = new EventEmitter();
