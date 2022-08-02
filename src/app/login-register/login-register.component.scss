@@ -211,6 +211,22 @@ $color-matt-dark: rgb(41, 43, 44);
   color: $color-light !important;
 }
 
+// terms and condition checkbox
+#registerCheck {
+  border: 0.5px solid $color-orange !important;
+  background: none !important;
+  border-radius: 0px !important;
+  padding: 10px !important;
+}
+
+// terms and condition
+#registerLabel {
+  color: $color-orange;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
 .muted {
   font-size: smaller;
   color: $color-light;
