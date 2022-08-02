@@ -5,65 +5,91 @@
         <a ngbNavLink><i class="fa-solid fa-user-check login-icon"></i>LOGIN</a>
         <ng-template ngbNavContent>
           <div class="content">
-            <h4 class="modal-title">LOGIN</h4>
+            <h4 class="modal-title">Scientist LOGIN</h4>
             <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      
       <form>
-        <div class="email-input">
-            <input type="email" id="loginName" class="form-control" value="ksjdkf"/>
+        <div class="email-container">
+          <label for="email">Email</label>
+            <input type="email" id="loginEmail" class="form-control-user" required/>
         </div>
 
-        <!-- Password input -->
-        <div class="password-input">
-          <input type="password" id="loginPassword" class="form-control" />
+        <div class="password-container">
+          <label for="email">Password</label>
+            <input type="password" id="loginPassword" class="form-control-user" required/>
         </div>
 
-        <!-- 2 column grid layout -->
         <div class="row mb-4">
           <div class="col-md-6 d-flex justify-content-center">
-            <!-- Checkbox -->
             <div class="form-check mb-3 mb-md-0">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="loginCheck"
-                checked
-              />
+              <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
               <label class="form-check-label" for="loginCheck">
                 Remember me
               </label>
             </div>
           </div>
 
-          <div class="col-md-6 d-flex justify-content-center">
-            <!-- Simple link -->
+          <div class="col-md-6 d-flex justify-content-center forgot-password">
             <a href="#!">Forgot password?</a>
           </div>
+
+          <button type="submit" class="submit-login-btn" >
+            Sign in
+          </button>
         </div>
 
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">
-          Sign in
-        </button>
-
-        <!-- Register buttons -->
+      
         <div class="text-center">
-          <p>Not a member? <a>Register</a></p>
+          <p>Not a scientist? <a>Register</a></p>
         </div>
       </form>
     </div>
-          </div>
-        </ng-template>
-      </li>
-      <li [ngbNavItem]="2" class="register">
+  </div>
+</ng-template>
+</li>
+  <li [ngbNavItem]="2" class="register">
         <a ngbNavLink><i class="fa-solid fa-user-plus register-icon"></i>REGISTER</a>
         <ng-template ngbNavContent class="content">
           <div class="content">
-            <h4 class="modal-title">REGISTER</h4>
-            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-             </p>
+            <h4 class="modal-title">Scientist REGISTER</h4>
+            <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      
+      <form>
+        <div class="name-container">
+          <label for="text">First Name</label>
+            <input type="text" id="firstName" class="form-control-user-reg" required/>
+ 
+          <label for="text">Last Name</label>
+            <input type="text" id="lastName" class="form-control-user-reg" required/>
+        </div>
+
+        <div class="email-container-reg">
+          <label for="email">Email</label>
+            <input type="email" id="loginEmail" class="form-control-user-reg" required/>
+        </div>
+
+        <div class="password-container-reg">
+          <label for="email">Password</label>
+            <input type="password" id="loginPassword" class="form-control-user-reg" required/>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-8 d-flex justify-content-center register-note">
+            <span class="muted">Note: register gives default scientist role</span>
           </div>
+
+          <button type="submit" class="submit-register-btn" >
+            Sign up
+          </button>
+        </div>
+
+      
+        <div class="text-center">
+          <p>Already a scientist? <a>Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
         </ng-template>
       </li>
     </ul>
