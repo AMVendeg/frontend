@@ -114,12 +114,10 @@ $color-matt-dark: rgb(41, 43, 44);
 .form-control-user {
   width: 100%;  
   height: 40px;
-  text-transform: uppercase;
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid $color-aqua !important;
+  border: 0.5px solid grey !important;
   background-color: rgb(41, 43, 44) !important;
-  opacity: 0.2;
   border-radius: 0px;
   color: $color-light;
 }
@@ -156,6 +154,15 @@ $color-matt-dark: rgb(41, 43, 44);
   margin: 20px 20px 20px 20px;
 }
 
+.submit-login-btn:hover {
+  background-color: rgb(14, 152, 152);
+  color: $color-light;
+}
+
+.submit-login-btn:active {
+  transform: translateY(2px);
+}
+
 
 // REGISTER CONTAINER
 .name-container {
@@ -168,11 +175,12 @@ $color-matt-dark: rgb(41, 43, 44);
   color: $color-orange;
   padding-bottom: 5px;
   margin-top: 5px;
+  font-weight: 400 !important;
  }
 
  .name-container input {
   width: 120px;
-  border: 1px solid $color-orange !important;
+  border: 1px solid grey !important;
  }
 
  .email-container-reg, .password-container-reg {
@@ -195,21 +203,20 @@ $color-matt-dark: rgb(41, 43, 44);
 .form-control-user-reg {
   width: 100%;  
   height: 40px;
-  text-transform: uppercase;
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid $color-orange !important;
+  border: 0.5px solid grey !important;
   background-color: rgb(41, 43, 44) !important;
-  opacity: 0.2;
   border-radius: 0px;
-  color: $color-light;
+  color: $color-light !important;
 }
 
 .muted {
   font-size: smaller;
-  color: aqua;
+  color: $color-light;
   font-family: 'Roboto';
   font-weight: 200;
+  margin-left: 10px;
 }
 
 .submit-register-btn {
@@ -221,6 +228,15 @@ $color-matt-dark: rgb(41, 43, 44);
   margin: 20px 20px 20px 20px;
 }
 
+.submit-register-btn:hover {
+  background-color: rgb(178, 140, 3);
+  color: $color-light;
+}
+
+.submit-register-btn:active {
+  transform: translateY(2px);
+}
+
 .close-btn {
   position: absolute;
   top: 5px;
@@ -229,5 +245,9 @@ $color-matt-dark: rgb(41, 43, 44);
   border: none;
   color: $color-aqua !important;
   font-size: 24px;
+}
+
+.close-btn:hover {
+  color: $color-orange !important;
 }
 
