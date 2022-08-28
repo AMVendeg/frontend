@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class SunCMEService {
 
-  baseURL = environment.baseURL;
+  nasaURL = environment.nasaURL;
   apiKey = environment.apiKey;
   isMostAccurate = environment.mostAccurateOnly;
   catalog = environment.catalog;
@@ -22,7 +22,7 @@ export class SunCMEService {
     halfAngle: number, 
     speed: number): Observable<CME[]> {
     return this.http.get<CME[]>(
-      this.baseURL + `startDate=` + startDate + `&endDate=`+ endDate + 
+      this.nasaURL + `startDate=` + startDate + `&endDate=`+ endDate + 
       `&halfAngle=` + halfAngle + `&speed=`+ speed + this.apiKey);
   }
 

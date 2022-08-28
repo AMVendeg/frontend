@@ -1,0 +1,53 @@
+<div class="sun-bg allComponent">
+  <div class="">
+    <div class="container">
+      <div class="search-box">
+
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            id="search"
+            placeholder="Search scientist by email"
+            [(ngModel)]="email"
+        />
+
+        <div class="input-group-append">
+            <button
+              class="searchBtn"
+              type="button"
+              (click)="searchEmail()">
+              Search
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lists">
+      <div class="userList-left">
+        <h4>Scientist User List</h4>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let user of users; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveUser(user, i)">
+            {{ user.email }}
+          </li>
+        </ul>
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllUsers()">
+          Remove All
+        </button>
+
+      </div>
+      <div class="userList-right">
+        <app-user-details
+          [viewMode]="true"
+          [currentUser]="currentUser"
+        ></app-user-details>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>

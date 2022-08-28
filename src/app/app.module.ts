@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SUNCMECardComponent } from './sun-cme-card/sun-cme-card.component';
-import { InputsComponent } from './inputs/inputs.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { LoginRegisterComponent } from './login-register/login-register.component';
+
+import { SUNCMECardComponent } from './sun-cme-card/sun-cme-card.component';
+import { InputsComponent } from './components/inputs/inputs.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { LoginRegisterComponent } from './components/login-register/login-register.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,13 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     SUNCMECardComponent,
     InputsComponent,
     SidebarComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    AddUserComponent,
+    UserDetailsComponent,
+    UserListComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

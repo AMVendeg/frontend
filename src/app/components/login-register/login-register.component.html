@@ -1,0 +1,177 @@
+
+<ng-template #content let-modal (click)="onCloseForm()">
+  <!-- <div class="backdrop" (click)="onCloseForm()"></div> -->
+  <div class="modal-body">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+
+      <li [ngbNavItem]="1" class="login">
+        <a ngbNavLink routerLink="/login" routerLinkActive="active">
+          <i class="fa-solid fa-user-check login-icon"></i>LOGIN</a>
+
+        <ng-template ngbNavContent>
+          <div class="content">
+            <h4 class="modal-title">Scientist LOGIN</h4>
+            <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            
+            <!-- LOGIN FORM STARTS -->
+              <form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+                <div class="email-container">
+                  <label for="email">Email *</label>
+                  <input 
+                  type="email" 
+                  id="loginEmail" 
+                  class="form-control" 
+                  [(ngModel)]="email"
+                  name="email"
+                  required/>
+                </div>
+
+                <div class="password-container">
+                  <label for="email">Password *</label>
+                    <input 
+                    type="password" 
+                    id="loginPassword" 
+                    class="form-control" 
+                    name="password"
+                    [(ngModel)]="password"
+                    required/>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-md-6 d-flex justify-content-center">
+                    <div class="form-check mb-3 mb-md-0">
+                      <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                      <label class="form-check-label" for="loginCheck" id="loginLabel">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 d-flex justify-content-center forgot-password">
+                    <a href="#!">Forgot password?</a>
+                  </div>
+
+                  <button type="submit" class="submit-login-btn" >
+                    Sign in
+                  </button>
+                </div>
+
+                <div class="text-center">
+                  <p>Not a scientist? <a>Register</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </ng-template>  <!-- LOGINFORM ENDS -->
+      </li>
+
+      
+      <!-- REGISTER form -->
+      <li [ngbNavItem]="2" class="register">
+        <a ngbNavLink routerLink="/register" routerLinkActive="active">
+          <i class="fa-solid fa-user-plus register-icon"></i>REGISTER
+        </a>
+          
+        <ng-template ngbNavContent class="content">
+          <div class="content">
+            <h4 class="modal-title">Scientist REGISTER</h4>
+            <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+          
+              <form (ngSubmit)="onRegister(reg)" #reg="ngForm">
+                <div class="name-container">
+                  <label for="text">First Name *</label>
+                    <input 
+                    type="text" 
+                    id="firstName" 
+                    class="form-control"
+                    name="firstName"
+                    [(ngModel)]="firstName"
+                    required/>
+        
+                  <label for="text">Last Name *</label>
+                    <input 
+                    type="text" 
+                    id="lastName" 
+                    class="form-control" 
+                    name="lastName"
+                    [(ngModel)]="lastName"
+                    required/>
+                </div>
+
+                <div class="email-container-reg">
+                  <label for="email">Email *</label>
+                    <input 
+                    type="email" 
+                    id="regEmail" 
+                    class="form-control" 
+                    name="regEMail"
+                    [(ngModel)]="email"
+                    required/>
+                </div>
+
+                <div class="password-container-reg">
+                  <label for="email">Password *</label>
+                    <input 
+                    type="password" 
+                    id="regPassword" 
+                    class="form-control" 
+                    name="regPassword"
+                    [(ngModel)]="password"
+                    required/>
+                </div>
+
+                <div class="password-container-reg">
+                  <label for="email">Confirm password *</label>
+                    <input 
+                    type="password" 
+                    id="repeatPassword" 
+                    class="form-control" 
+                    name="repeatPassword"
+                    [(ngModel)]="repeatPassword"
+                    required/>
+                </div>
+
+                <!-- <div class="col-md-12 d-flex justify-content-center">
+                  <div class="form-check mb-6 mb-md-0">
+                    <input class="form-check-input" type="checkbox" value="" id="registerCheck" checked/>
+                    
+                    <label class="form-check-label" for="registerCheck" id="registerLabel">
+                      I have read and agree to the terms and conditions
+                    </label>
+                  </div>
+                </div> -->
+
+                <div class="text-center">
+                  <span class="muted">Note: register gives default scientist role</span>
+                </div>
+
+                <div class="row mb-8">
+                  <button type="submit" class="submit-register-btn" >
+                    Sign up
+                  </button>
+                </div>
+
+                <div class="text-center">
+                  <p>Already a scientist? <a>Login</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </ng-template> <!-- REG FORM ENDS -->
+      </li>
+    </ul>
+   <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </div>
+
+  <!-- REG / LOGIN CLOSE  -->
+  <button type="button" class="close-btn" (click)="modal.dismiss('close')">
+    <i class="fa-solid fa-close"></i>
+  </button>
+
+</ng-template>
+
+<!-- OPEN USER LOGIN / REG MODAL -->
+<button (click)="openModalDialogCustomClass(content)" class="login-register">
+  <i class="fa-solid fa-user"></i>
+</button>
+

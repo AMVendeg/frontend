@@ -1,0 +1,69 @@
+@import "../../styles.scss";
+
+$color-dark: rgb(4, 12, 18);
+$color-light: #e9f0f6;
+$color-orange: rgb(216, 173, 19);
+$color-aqua: aqua;
+
+footer {
+  height: 150px;
+  background-color: $color-dark;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer-left, .footer-right {
+  margin: auto;
+}
+
+h6 {
+  display: inline-block;
+  color: $color-aqua;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-newsletter {
+  background-color: $color-dark;
+  border: 1px solid $color-light;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+.btn-newsletter:hover {
+  border: 1px solid $color-light;
+  color: $color-aqua;
+}
+
+
+.footer-social-menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer-social-menu li {
+  padding-right: 20px;
+}
+
+.footer-social-menu li a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+.social-icon {
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-aqua;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.social-icon:hover {
+  border: 1px solid $color-light;
+  color: $color-aqua;
+}

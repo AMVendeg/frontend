@@ -10,6 +10,10 @@ $color-matt-dark: rgb(41, 43, 44);
   box-sizing: border-box;
 }
 
+.backdrop {
+  position: fixed;
+}
+
 .modal-body {
   box-sizing: border-box;
   margin: 0 !important;
@@ -28,7 +32,7 @@ $color-matt-dark: rgb(41, 43, 44);
 // user login/register button
 .login-register {
   position: absolute;
-  top: 170px;
+  top: 240px;
   right: 20px;
   width: 40px;
   height: 40px;
@@ -111,7 +115,7 @@ $color-matt-dark: rgb(41, 43, 44);
  padding-bottom: 5px;
 }
 
-.form-control-user {
+#loginEmail, #loginPassword  {
   width: 100%;  
   height: 40px;
   padding: 10px;
@@ -200,7 +204,7 @@ $color-matt-dark: rgb(41, 43, 44);
  padding-bottom: 5px;
 }
 
-.form-control-user-reg {
+#firstName, #lastName, #regEmail, #regPassword, #repeatPassword {
   width: 100%;  
   height: 40px;
   padding: 10px;

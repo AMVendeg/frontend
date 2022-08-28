@@ -1,7 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { CME } from '../types/cme';
 import { SunCMEService } from '../services/sun-cme.service';
-import { ActivatedRoute } from '@angular/router';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -10,8 +9,10 @@ import * as XLSX from 'xlsx';
   styleUrls: ['./sun-cme-card.component.scss']
 })
 export class SUNCMECardComponent implements OnInit {
+  
+  signInClicked: boolean | undefined;
 
-  constructor(private SunCMEService: SunCMEService, private route: ActivatedRoute) {
+  constructor(private SunCMEService: SunCMEService) {
     this.cmeData;
   }
   
@@ -50,6 +51,11 @@ export class SUNCMECardComponent implements OnInit {
 
     // save to file
     XLSX.writeFile(workbook, this.fileName);
+  }
+
+
+  closeForm() {
+    this.signInClicked = false;
   }
 
 }

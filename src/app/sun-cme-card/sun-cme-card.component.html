@@ -1,38 +1,47 @@
-<app-inputs (data)="searchCME($event)"></app-inputs>
+<div class="sun-bg allComponent">
+  <div class="dashboard">
 
-<button (click)="exportExcel()" type="button" class="dwnld-btn">
-  <i class="fa-solid fa-download"></i>
-</button>
+    <div class="title">
+      <span>SEARCH SUN Coronal Mass Ejection (CME)</span>
+    </div>
 
-<app-login-register></app-login-register>
+    <app-inputs (data)="searchCME($event)"></app-inputs>
+    <app-sidebar></app-sidebar> 
 
+    <button (click)="exportExcel()" type="button" class="dwnld-btn">
+      <i class="fa-solid fa-download"></i>
+    </button>
+    
+    <app-login-register></app-login-register>
 
-<div id="allData">
-<table class="table">
-  <thead>
-    <tr>
-    <th scope="col"><i class="fa-solid fa-clock"></i> Time</th>
-    <th scope="col"><i class="fa-solid fa-globe"></i> Latitude</th>
-    <th scope="col"><i class="fa-solid fa-angle-left"></i> HalfAngle</th>
-    <th scope="col"><i class="fa-solid fa-gauge-simple-high"></i> Speed</th>
-    <th scope="col"><i class="fa-solid fa-wave-square"></i> Type</th>
-    <th scope="col"><i class="fa-solid fa-circle-exclamation"></i> Most Accurate</th>
-    <th scope="col"><i class="fa-solid fa-file"></i> Associated CME ID</th>
-    <th scope="col"><i class="fa-solid fa-folder-open"></i> Catalog</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let cme of cmeData" >
-      <td>{{ cme.time21_5 }}</td>
-      <td>{{ cme.latitude }}</td>
-      <td>{{ cme.halfAngle }}</td>
-      <td>{{ cme.speed }}</td>
-      <td>{{ cme.type }}</td>
-      <td>{{ cme.isMostAccurate }}</td>
-      <td>{{ cme.associatedCMEID }}</td>
-      <td>{{ cme.catalog}}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+    <div id="allData">
+    <table class="table">
+      <thead>
+        <tr>
+        <th scope="col"><i class="fa-solid fa-clock"></i> Time</th>
+        <th scope="col"><i class="fa-solid fa-globe"></i> Latitude</th>
+        <th scope="col"><i class="fa-solid fa-angle-left"></i> HalfAngle</th>
+        <th scope="col"><i class="fa-solid fa-gauge-simple-high"></i> Speed</th>
+        <th scope="col"><i class="fa-solid fa-wave-square"></i> Type</th>
+        <th scope="col"><i class="fa-solid fa-circle-exclamation"></i> Most Accurate</th>
+        <th scope="col"><i class="fa-solid fa-file"></i> Associated CME ID</th>
+        <th scope="col"><i class="fa-solid fa-folder-open"></i> Catalog</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cme of cmeData" >
+          <td>{{ cme.time21_5 }}</td>
+          <td>{{ cme.latitude }}</td>
+          <td>{{ cme.halfAngle }}</td>
+          <td>{{ cme.speed }}</td>
+          <td>{{ cme.type }}</td>
+          <td>{{ cme.isMostAccurate }}</td>
+          <td>{{ cme.associatedCMEID }}</td>
+          <td>{{ cme.catalog}}</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  
