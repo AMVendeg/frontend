@@ -16,9 +16,11 @@ export class UserListComponent implements OnInit {
   email = '';
 
   constructor(private userService: UserService) { }
+
   ngOnInit(): void {
     this.retrieveUsers();
   }
+
   retrieveUsers(): void {
     this.userService.getAll()
       .subscribe({
@@ -29,6 +31,7 @@ export class UserListComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+
   refreshList(): void {
     this.retrieveUsers();
     this.currentUser = {};
@@ -38,6 +41,7 @@ export class UserListComponent implements OnInit {
     this.currentUser = user;
     this.currentIndex = index;
   }
+
   removeAllUsers(): void {
     this.userService.deleteAll()
       .subscribe({
@@ -48,6 +52,7 @@ export class UserListComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+  
   searchEmail(): void {
     this.currentUser = {};
     this.currentIndex = -1;

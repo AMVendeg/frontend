@@ -20,10 +20,11 @@
                   <input 
                   type="email" 
                   id="loginEmail" 
-                  class="form-control" 
+                  class="form-control ng-valid ng-invalid" 
                   [(ngModel)]="email"
                   name="email"
-                  required/>
+                  required
+                  />
                 </div>
 
                 <div class="password-container">
@@ -34,7 +35,8 @@
                     class="form-control" 
                     name="password"
                     [(ngModel)]="password"
-                    required/>
+                    required
+                    minlength="8"/>
                 </div>
 
                 <div class="row mb-4">

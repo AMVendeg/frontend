@@ -9,7 +9,7 @@ import { User } from 'src/app/models/user.model';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  @Input() viewMode = false;
+  @Input() viewModel = false;
   @Input() currentUser: User = {
     email: '',
     firstName: '',
@@ -25,11 +25,13 @@ export class UserDetailsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    if (!this.viewMode) {
+    if (!this.viewModel) {
       this.message = '';
       this.getUser(this.route.snapshot.params["id"]);
     }
   }
+
+
   getUser(id: string): void {
     this.userService.get(id)
       .subscribe({
@@ -40,6 +42,7 @@ export class UserDetailsComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+
   updateIsAdmin(status: boolean): void {
     const data = {
       email: this.currentUser.email,

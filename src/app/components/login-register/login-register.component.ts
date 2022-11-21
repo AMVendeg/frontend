@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgForm } from '@angular/forms';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login-register',

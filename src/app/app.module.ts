@@ -17,6 +17,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

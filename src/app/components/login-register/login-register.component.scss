@@ -126,12 +126,19 @@ $color-matt-dark: rgb(41, 43, 44);
   color: $color-light;
 }
 
-// remember me checkbox
-.form-check-input {
-  border: 0.5px solid $color-aqua !important;
-  background: none !important;
+// remember me
+input[type="checkbox"] {
+  border: 1px solid aqua !important;
   border-radius: 0px !important;
   padding: 10px !important;
+  background-color: $color-matt-dark !important;
+}
+
+input[type="checkbox"]:checked {
+  border: 1px solid aqua !important;
+  border-radius: 0px !important;
+  padding: 10px !important;
+  background-color: none !important;
 }
 
 // remember me
@@ -170,9 +177,8 @@ $color-matt-dark: rgb(41, 43, 44);
 
 // REGISTER CONTAINER
 .name-container {
-  padding-left: 10px;
-  display: flex;
-  justify-content: space-between;
+  padding: 10px;
+ 
 }
 
 .name-container label {
@@ -182,10 +188,7 @@ $color-matt-dark: rgb(41, 43, 44);
   margin-top: 5px;
  }
 
- .name-container input {
-  width: 120px;
-  border: 1px solid grey !important;
- }
+
 
  .email-container-reg, .password-container-reg {
   width: 100%;
@@ -271,3 +274,11 @@ $color-matt-dark: rgb(41, 43, 44);
   color: $color-orange !important;
 }
 
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
